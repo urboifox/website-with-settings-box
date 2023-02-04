@@ -1,0 +1,7 @@
+:root {
+  --font-main: "Open Sans", sans-serif;
+  --font-sub: "Raleway", sans-serif;
+}
+body {
+  font-family: var(--font-main);
+}
