@@ -51,12 +51,134 @@ body {
   font-size: 15px;
 }
 
+.settings_box {
+  position: fixed;
+  min-height: 100vh;
+  width: 250px;
+  background-color: var(--white);
+  z-index: 1000;
+  top: 0;
+  left: -250px;
+  /* left: 0px; */
+  transition: 300ms ease-out;
+  -webkit-transition: 300ms ease-out;
+  -moz-transition: 300ms ease-out;
+  -ms-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+}
+.settings_box.open {
+  left: 0;
+}
+.settings_box .settings_toggle {
+  position: absolute;
+  top: 150px;
+  right: -40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-main);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+.settings_box .gear {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+
+.settings_box .settings_options {
+  padding: 1.2rem;
+}
+.settings_box .settings_options h4 {
+  font-size: 1.6rem;
+  color: #666;
+  user-select: none;
+  margin-bottom: 1.5rem;
+}
+.settings_box .settings_options .colors {
+  text-align: center;
+}
+.settings_box .settings_options .colors li {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  background-color: black;
+  position: relative;
+  transition: 100ms;
+  -webkit-transition: 100ms;
+  -moz-transition: 100ms;
+  -ms-transition: 100ms;
+  -o-transition: 100ms;
+  opacity: 0.5;
+}
+.settings_box .settings_options .colors li:last-child {
+  margin: 0;
+}
+.settings_box .settings_options .colors li:first-child {
+  background-color: #ff9800;
+}
+.settings_box .settings_options .colors li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings_box .settings_options .colors li:nth-child(3) {
+  background-color: #009688;
+}
+.settings_box .settings_options .colors li:nth-child(4) {
+  background-color: #03a9f4;
+}
+.settings_box .settings_options .colors li:nth-child(5) {
+  background-color: #4caf50;
+}
+.settings_box .settings_options .colors li.active {
+  opacity: 1;
+}
+.settings_box .settings_options .colors li.active::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: -15px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  border-color: var(--color-main) transparent transparent transparent;
+  border-width: 9px 6px 6px 6px;
+  border-style: solid;
+}
 .landing {
   min-height: 100vh;
   position: relative;
-  background-image: url(../assets/01.jpg);
+  background-image: url(../assets/1.jpg);
   background-position: center;
   background-size: cover;
+  transition: 1000ms;
+  -webkit-transition: 1000ms;
+  -moz-transition: 1000ms;
+  -ms-transition: 1000ms;
+  -o-transition: 1000ms;
 }
 .landing .overlay {
   position: absolute;
@@ -117,9 +239,15 @@ body {
   margin-bottom: 1rem;
   font-size: 3rem;
   color: var(--white);
+  text-transform: capitalize;
 }
 .landing .intro_text h1 span {
   color: var(--color-main);
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
 }
 .landing .intro_text p {
   line-height: 1.6;
