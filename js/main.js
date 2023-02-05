@@ -3,6 +3,18 @@ const settingsBox = document.querySelector(`.settings_box`);
 const colorsLis = document.querySelectorAll(`.settings_options .colors li`);
 const landing = document.querySelector(`.landing`);
 let currBackground = 1;
+const openNav = document.querySelector(`.landing .open`);
+const closeNav = document.querySelector(`.landing .close`);
+const nav = document.querySelector(`.landing .links`);
+
+// set open and close NAV buttons
+
+openNav.addEventListener(`click`, () => {
+  nav.style.right = 0;
+});
+closeNav.addEventListener(`click`, (q) => {
+  nav.style.right = "-250px";
+});
 
 //check for local storage values
 
