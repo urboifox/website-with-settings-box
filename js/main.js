@@ -13,7 +13,7 @@ openNav.addEventListener(`click`, () => {
   nav.style.right = 0;
 });
 closeNav.addEventListener(`click`, (q) => {
-  nav.style.right = "-250px";
+  nav.style.right = "-100%";
 });
 
 //check for local storage values
@@ -125,4 +125,24 @@ randomBackEl.forEach((el) => {
       clearInterval(randomizeBack);
     }
   });
+});
+
+// select skills element
+
+const skillsHolder = document.querySelector(`.skills_holder`);
+const skillsSpan = document.querySelectorAll(`.skills_holder .skill_value`);
+
+window.addEventListener(`scroll`, () => {
+  if (
+    window.scrollY >=
+    skillsHolder.offsetTop + skillsHolder.offsetHeight - window.innerHeight
+  ) {
+    skillsSpan.forEach((span) => {
+      span.style.width = span.dataset.width;
+    });
+  } else {
+    skillsSpan.forEach((span) => {
+      span.style.width = 0;
+    });
+  }
 });
