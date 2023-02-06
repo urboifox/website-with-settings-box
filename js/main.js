@@ -146,3 +146,53 @@ window.addEventListener(`scroll`, () => {
     });
   }
 });
+
+// image popup
+
+const images = document.querySelectorAll(`#gallery img`);
+
+images.forEach((img) => {
+  img.addEventListener(`click`, () => {
+    // overlay creation
+    let popupOverlay = document.createElement(`div`);
+    popupOverlay.classList.add(`popup_overlay`);
+    popupOverlay.classList.add(`popup_close`);
+    // when user click on the overlay it deletes the popup
+    document.addEventListener(`click`, (e) => {
+      if (e.target.classList.contains(`popup_close`)) {
+        popupBox.remove();
+        popupOverlay.remove();
+      }
+    });
+
+    document.body.appendChild(popupOverlay);
+
+    let popupBox = document.createElement(`div`);
+    popupBox.classList.add(`popup_box`);
+
+    let xHolder = document.createElement(`div`);
+    xHolder.classList.add(`x_holder`);
+    xHolder.classList.add(`popup_close`);
+
+    let xMark = document.createElement(`i`);
+    xMark.classList.add(`fa-solid`);
+    xMark.classList.add(`fa-xmark`);
+    xMark.classList.add(`popup_x`);
+    xMark.classList.add(`popup_close`);
+
+    // append I to xHolder
+    xHolder.appendChild(xMark);
+    // headline
+    let headline = document.createElement(`h1`);
+    headline.classList.add(`popup_headline`);
+    headline.appendChild(document.createTextNode(img.alt));
+
+    let popupImg = document.createElement(`img`);
+    popupImg.src = img.src;
+
+    popupBox.appendChild(headline);
+    popupBox.appendChild(xHolder);
+    popupBox.appendChild(popupImg);
+    document.body.appendChild(popupBox);
+  });
+});
