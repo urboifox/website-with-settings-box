@@ -509,3 +509,22 @@ body {
   -ms-transition: 1s ease-out;
   -o-transition: 1s ease-out;
 }
+
+/* gallery section */
+#gallery {
+  padding: var(--section-padding) 0;
+}
+#gallery h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#gallery .images_holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+#gallery .images_holder img {
+  width: 100%;
+  border: 4px solid #ddd;
+  margin: 5px;
+}
