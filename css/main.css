@@ -50,6 +50,7 @@ html {
 body {
   font-family: var(--font-main);
   font-size: 15px;
+  overflow-x: hidden;
 }
 
 .settings_box {
@@ -278,6 +279,14 @@ body {
   font-size: 1.2rem;
   cursor: pointer;
   display: none;
+  background-color: var(--color-main);
+  padding: 5px 8px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  color: black;
 }
 .landing .links div.close {
   color: var(--white);
@@ -500,7 +509,7 @@ body {
   position: absolute;
   width: 0;
   height: 100%;
-  background-color: var(--color-main);
+  background-color: var(--white);
   top: 0;
   left: 0;
   transition: 1s ease-out;
@@ -703,6 +712,20 @@ body {
   color: #666;
 }
 
+@media (max-width: 767px) {
+  .time_line .progress {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .time_line .progress::before,
+  .time_line .progress::after {
+    display: none;
+  }
+}
+
+/* features */
 .features {
   padding: var(--section-padding) 0;
 }
@@ -782,7 +805,7 @@ h2 {
 }
 .testimonials .ts_holder {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 

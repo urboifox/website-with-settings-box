@@ -139,10 +139,7 @@ window.addEventListener(`scroll`, () => {
   ) {
     skillsSpan.forEach((span) => {
       span.style.width = span.dataset.width;
-    });
-  } else {
-    skillsSpan.forEach((span) => {
-      span.style.width = 0;
+      span.style.backgroundColor = `var(--color-main)`;
     });
   }
 });
