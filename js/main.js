@@ -193,3 +193,5 @@ images.forEach((img) => {
     document.body.appendChild(popupBox);
   });
 });
+
+// make bullets and links go to thier section when clicked
