@@ -1031,3 +1031,17 @@ h2 {
     flex-direction: column;
   }
 }
+/* footer */
+
+footer {
+  background-color: #333;
+  padding: 50px 0;
+}
+footer p {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--white);
+}
+footer p a {
+  color: var(--color-main);
+}
