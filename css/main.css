@@ -391,7 +391,7 @@ body {
     gap: 0;
     display: flex;
     align-items: center;
-    z-index: 3;
+    z-index: 10003;
     min-height: 100vh;
   }
   .landing header nav .links li {
@@ -427,6 +427,7 @@ body {
   }
   .landing div.open {
     display: block;
+    z-index: 10002;
   }
 }
 
@@ -623,7 +624,7 @@ body {
   border-radius: 4px;
   background-color: var(--color-main);
   position: relative;
-  z-index: 2;
+  z-index: 1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -783,7 +784,7 @@ body {
   top: 0;
   height: 100%;
   width: 50%;
-  z-index: 1;
+  z-index: 0;
 }
 .testimonials::before {
   left: 0;
@@ -794,7 +795,7 @@ body {
   background-color: #333;
 }
 .testimonials .container {
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 h2 {
