@@ -195,3 +195,31 @@ images.forEach((img) => {
 });
 
 // make bullets and links go to thier section when clicked
+
+const bulletsLinks = document.querySelectorAll(`.bullets ul li`);
+const navLinks = Array.from(document.querySelectorAll(`.links a`));
+
+scrollToView(bulletsLinks);
+scrollToView(navLinks);
+
+function scrollToView(arrayOfLinks) {
+  arrayOfLinks.forEach((link) => {
+    link.addEventListener(`click`, () => {
+      document.getElementById(`${link.dataset.target}`).scrollIntoView();
+    });
+  });
+}
+
+// change active from bullets on scroll
+
+window.addEventListener(`scroll`, () => {
+  bulletsLinks.forEach((link) => {
+    if (
+      window.scrollY >=
+      document.getElementById(link.dataset.target).offsetTop - 10
+    ) {
+      bulletsLinks.forEach((link) => link.classList.remove(`active`));
+      link.classList.add(`active`);
+    }
+  });
+});

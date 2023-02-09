@@ -49,12 +49,14 @@
       <!-- navbar bullets -->
       <article class="bullets">
         <ul>
-          <li><span class="tooltip">about</span></li>
-          <li><span class="tooltip">skills</span></li>
-          <li><span class="tooltip">gallery</span></li>
-          <li><span class="tooltip">timeline</span></li>
-          <li><span class="tooltip">features</span></li>
-          <li><span class="tooltip">testimonials</span></li>
+          <li data-target="about"><span class="tooltip">about</span></li>
+          <li data-target="skills"><span class="tooltip">skills</span></li>
+          <li data-target="gallery"><span class="tooltip">gallery</span></li>
+          <li data-target="timeLine"><span class="tooltip">timeline</span></li>
+          <li data-target="features"><span class="tooltip">features</span></li>
+          <li data-target="testimonials">
+            <span class="tooltip">testimonials</span>
+          </li>
         </ul>
       </article>
       <!-- landing -->
@@ -69,12 +71,12 @@
             </div>
 
             <ul class="links">
-              <li><a>About</a></li>
-              <li><a>skills</a></li>
-              <li><a>gallery</a></li>
-              <li><a>timeline</a></li>
-              <li><a>features</a></li>
-              <li><a>testimonials</a></li>
+              <li><a data-target="about">About</a></li>
+              <li><a data-target="skills">skills</a></li>
+              <li><a data-target="gallery">gallery</a></li>
+              <li><a data-target="timeLine">timeline</a></li>
+              <li><a data-target="features">features</a></li>
+              <li><a data-target="testimonials">testimonials</a></li>
               <div class="close">
                 <i class="fa-solid fa-xmark close"></i>
               </div>
@@ -170,7 +172,7 @@
         </div>
       </section>
       <!-- time line section -->
-      <section class="time_line">
+      <section class="time_line" id="timeLine">
         <div class="container">
           <h2>Time Line</h2>
           <div class="progress_holder">
@@ -224,7 +226,7 @@
         </div>
       </section>
       <!-- our features -->
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <h2>Our features</h2>
           <div class="features_holder">
@@ -280,7 +282,7 @@
         </div>
       </section>
       <!-- testimonials section -->
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <div class="container">
           <h2>testimonials</h2>
           <div class="ts_holder">
