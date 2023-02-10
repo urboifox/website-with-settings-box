@@ -16,4 +16,4 @@ template from (Elzero Web School) using html css js
 
 [Visit Website](https://codefighter.netlify.app/)
 
-### Dont forget to put a star on the repository if you like the project!
+### Dont forget to put a star on the repository if you liked the project!
