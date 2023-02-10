@@ -223,3 +223,52 @@ window.addEventListener(`scroll`, () => {
     }
   });
 });
+
+// toggle bullets
+
+const selectors = document.querySelectorAll(`.toggle_bullets .selectors span`);
+const bulletsHolder = document.querySelector(`.bullets`);
+let showBullets;
+if (localStorage.getItem(`showBullets`)) {
+  showBullets = localStorage.getItem(`showBullets`);
+} else {
+  showBullets = "true";
+}
+bulletsStateChanger();
+selectors.forEach((selector) => {
+  selector.classList.remove(`active`);
+  if (showBullets === "true") {
+    document.querySelector(`.toggle_bullets .yes`).classList.add(`active`);
+  } else {
+    document.querySelector(`.toggle_bullets .no`).classList.add(`active`);
+  }
+  selector.addEventListener(`click`, () => {
+    if (selector.classList.contains(`yes`)) {
+      showBullets = "true";
+    } else {
+      showBullets = "false";
+    }
+    selectors.forEach((selector) => selector.classList.remove(`active`));
+    selector.classList.add(`active`);
+    localStorage.setItem(`showBullets`, showBullets);
+    bulletsStateChanger();
+  });
+});
+
+// hides or show bullets on click and on load
+function bulletsStateChanger() {
+  if (showBullets === "true") {
+    bulletsHolder.style.display = `block`;
+  } else {
+    bulletsHolder.style.display = `none`;
+  }
+}
+
+// reset button
+
+const resetButton = document.querySelector(`.option_box.reset .button`);
+
+resetButton.addEventListener(`click`, () => {
+  localStorage.clear();
+  location.reload();
+});
