@@ -9,6 +9,6 @@
 
 ## Live Preview
 
-[Visit Website](https://codefighter.netlify.app/)
+[Visit Website](https://code-warrior.netlify.app/)
 
 ### Dont forget to put a star on the repository if you liked the project!
